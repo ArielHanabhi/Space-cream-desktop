@@ -1,0 +1,291 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+:root
+{--ff-desktop:'Roboto', sans-serif;
+  --ff-heading:'Staatliches', cursive;
+  --ff-texting:'Palanquin',sans-serif;
+
+  --hue:230;
+
+  --fc-texting:hsl(var(--hue), 84%, 12%);
+  --fc-heading:hsl(var(--hue), 17%, 35%);
+  
+  font-size: 62.5%;
+  --fs-heading:4rem;
+  --fs-text:2rem;
+}
+
+body
+{
+  font-family:'Palanquin',sans-serif; ;
+  background-color: hsla(233, 100%, 97%, 1);
+  
+}
+header
+{
+  background-color: hsl(var(--hue), 17%, 62%);
+  width: 100%;
+  
+  display: grid;
+  place-items: center;
+  
+  
+  
+  padding-top: 3.2rem;
+  
+}
+header img
+{
+  padding-bottom: 2rem;
+}
+.title
+{
+  width: 100%;
+  margin-bottom: 2.9rem;
+  text-align: center;
+  
+}
+h1
+{
+  -webkit-font-smoothing:antialiased;
+}
+h1, span
+{
+  text-transform: uppercase;
+  font-family:var(--ff-heading);
+  
+  font-weight:400;
+  font-size:var(--fs-heading);
+
+  height: 4.9rem;
+
+letter-spacing: 0.05em;
+
+color: hsl(var(--hue), 100%, 100%);
+
+text-shadow: 0px 2px 2px hsl(var(--hue), 0%, 0%, 0.466);
+background-color: hsl(275, 18%, 79%)
+}
+main
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.8rem 3.2rem 6rem;
+}
+.text
+{
+  font-family: 'Palanquin',sans-serif;
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  width: 31.5rem;
+  
+  
+  
+}
+
+.card:hover
+{
+  transform: scale(1.1);
+  transition: 200ms;
+  
+}
+.cards
+{
+  display: grid;
+  gap: 3.2rem;
+  margin-top: 5rem;
+}
+.cards .card
+{
+  position: relative;
+  width: 32rem;
+  
+  animation: downtop 700ms;
+
+  transition: 300ms;
+  
+}
+
+.card span
+{
+  text-shadow: none;
+  display: flex;
+  font-weight: 400;
+  justify-content: space-around;
+  font-size: 2rem;
+  line-height: 3.4rem;
+  letter-spacing: 0.05em;
+  color: hsl(var(--hue), 17%, 35%);
+  background-color:hsla(312, 91%, 96%, 1);
+  border-radius: 20px;
+  width: 11.2rem;
+  height: 3.5rem;
+  padding-top: 0.1rem;
+  
+  position: absolute;
+  
+  top: 1.6rem;
+  right: 1.6rem; 
+
+  animation: topdown 700ms;
+}
+.cards .card img
+{
+  width: 100%;
+}
+@keyframes downtop
+{
+ 0%
+ {
+  opacity: 0;
+  transform: translateY(35px);
+ }
+ 100%
+ {
+  opacity: 1;
+ }
+}
+@keyframes topdown
+{
+  0%
+  {
+    opacity: 0;
+    transform: translateY(-55px);
+  }
+  50%
+  {
+    opacity: 0.5;
+  }
+  100%
+  {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+footer
+{
+  color: #4A4E69;
+  font-family: 'Open Sans';
+
+font-size: 14px;
+line-height: 28px;
+
+text-align: center;
+
+font-family: 'Open Sans', sans-serif;
+}
+
+@media(max-width:768px)
+{
+  .cards-desktop
+  {
+    display: none;
+  }
+  footer
+  {
+    display: none;
+  }
+}
+@media(min-width:768px)
+{
+ body
+ {
+  background-color: hsl(var(--hue)100%,100%);
+ }
+ .container
+ {
+  display: grid;
+  grid-template-columns: 37rem 1fr;
+  grid-template-areas: "1" "2";
+ }
+ body header
+ {
+  grid-area: 1;
+ }
+ body main
+ {
+  grid-area: 2;
+ }
+ header
+ {
+  
+  height: 100rem;
+  display: flex;
+  flex-direction: column;
+}
+.text::after
+{
+  content:'pharetra est in, sagittis lorem.elit. Donec a rhoncus leo. Donec at scelerisque magna. Nullam vitae neque sit amet erat dignissim cursus ac ac lectus. Aliquam erat volutpat. Praesent at quam aliquet, pharetra est in, sagittis lorem. ';
+}
+.text
+{
+  width: 27rem;
+  height: 26rem;
+  position: absolute;
+  left: 4rem;
+  top: 29rem;
+  color: hsl(var(--hue), 100%, 100%);
+  font-family: var(--ff-desktop);
+}
+
+.cards
+{
+  gap:3.2rem;
+  margin: 0;
+  padding: 0;
+  margin-top: 4rem;
+  margin-left: 5rem;
+  grid-template-columns: 22rem 22rem 22rem;
+}
+
+.cards div:nth-child(4) img,.cards div:nth-child(2) img
+{
+  height: 35rem ;
+}
+.cards .card img
+{
+  width: 220px;
+}
+.cards .card span
+{
+  display: none;
+}
+.cards div:nth-child(3)
+{
+  
+right: 252px;
+top: 375px;
+
+}
+.cards div:nth-child(4) 
+{
+  position: absolute;
+  top: 26rem;
+}
+footer
+{
+  position: absolute;
+  top:66rem;
+  left: 64rem;
+}
+.cards-desktop
+{
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  position: absolute;
+  left: 97.3rem;
+}
+.cards-desktop div:nth-child(2) img
+{
+  height: 35rem;
+}
+}
